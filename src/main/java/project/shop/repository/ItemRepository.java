@@ -8,7 +8,8 @@ import project.shop.entity.Item;
 
 import java.util.List;
 
-public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item> {
+public interface ItemRepository extends JpaRepository<Item, Long>,
+        QuerydslPredicateExecutor<Item>, ItemRepositoryCustom {
 
     List<Item> findByItemName(String itemName);
 
